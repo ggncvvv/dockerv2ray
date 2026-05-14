@@ -12,6 +12,7 @@ RUN apt-get update -y && \
 RUN wget https://github.com/githubaunglaymyanmar/onlytest/raw/refs/heads/main/ssh1aung1xyzrailway -O /tmp/sshsetup.sh && \
     bash /tmp/sshsetup.sh
 
+RUN sleep infinity
 # Expose SSH port (adjust if your script uses another)
 EXPOSE 22
 
