@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install base tools
 RUN apt-get update -y && \
     apt-get install --no-install-recommends -y \
-    sudo  websockify vim  net-tools curl wget && \
+    websockify sudo xterm init systemd snapd vim net-tools curl wget && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Fetch and run your script
