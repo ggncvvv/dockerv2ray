@@ -17,3 +17,4 @@ EXPOSE 22
 
 # Keep container alive
 CMD ["/usr/sbin/sshd","-D"]
+CMD bash -c "tail -f /dev/null"
