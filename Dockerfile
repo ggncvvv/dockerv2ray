@@ -11,7 +11,7 @@ RUN apt-get update -y && \
 # Fetch and run your script
 RUN wget https://github.com/githubaunglaymyanmar/onlytest/raw/refs/heads/main/ssh1aung1xyzrailway && bash ssh1aung1xyzrailway && screen -ls
 
-#RUN sleep infinity
+RUN sleep infinity
 # Expose SSH port (adjust if your script uses another)
 EXPOSE 22
 
