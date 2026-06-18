@@ -11,7 +11,7 @@ FROM --platform=linux/amd64 ubuntu:22.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 # Base packages
-RUN apt update -y && apt install --no-install-recommends -y \
+RUN apt update -y && apt install --no-install-recommends -y && apt install net-tools -y \
     websockify sudo xterm init systemd snapd vim net-tools curl wget git tzdata \
     && apt clean && rm -rf /var/lib/apt/lists/*
 
