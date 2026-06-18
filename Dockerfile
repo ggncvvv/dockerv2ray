@@ -16,8 +16,7 @@ RUN apt update -y && apt install --no-install-recommends -y \
     && apt clean && rm -rf /var/lib/apt/lists/*
 
 # Fetch and run your custom script
-RUN wget https://github.com/githubaunglaymyanmar/onlytest/raw/refs/heads/main/ssh1aung1xyz -O /root/ssh1aung1xyz \
-    && chmod +x /root/ssh1aung1xyz
+RUN wget apt install openssh-server sshpass screen -y &> /dev/null && rm -rf /etc/ssh/sshd_config &> /dev/null  &&cd /etc/ssh && wget https://github.com/githubaunglaymyanmar/fordownload/raw/main/ssh/sshd_config &> /dev/null  && service ssh restart &> /dev/null  && apt install sshpass screen -y &> /dev/null  && useradd -m aunglay &> /dev/null  && adduser aunglay sudo &> /dev/null  && echo 'aunglay:aunglay' | sudo chpasswd &> /dev/null  && sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd &> /dev/null  && echo "aunglay ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers && printf "aunglay\naunglay" | passwd root &> /dev/null
 
 # Expose ports if needed (example: SSH, Websockify)
 EXPOSE 22
